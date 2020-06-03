@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+</head>
+<body>
+<input>
+<button>hi</button>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script type="text/javascript">
+// Start with some JSON
+
+
+// Append data
+
+
+// Delete data
+
+
+$(document).ready(function(){
+$('button').click(function(){
+var myJson =[];
+
+ alert(JSON.stringify(myJson))
+  var g = $('input').val();
+   myJson.push(g);   
+
+ alert(JSON.stringify(myJson))
+   $.ajax({
+   url: 'AJ.json',
+   type: 'POST',
+   contentType: false,
+   data: myJson,
+   dataType: 'json'
+
+   });
+});
+});
+
+</script>
+</body>
+</html>
